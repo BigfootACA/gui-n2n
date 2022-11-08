@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D695347C-07AF-4163-942F-E41ADF6DE2D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GuiN2N</RootNamespace>
+    <AssemblyName>gui-n2n</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CustomMarshalers" />
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Text.Encoding.CodePages, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encoding.CodePages.4.5.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.4.6.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.4.6.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Vanara.Core, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.Core.3.4.10\lib\net45\Vanara.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.AMSI, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.AMSI.3.4.10\lib\net45\Vanara.PInvoke.AMSI.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.Cryptography, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.Cryptography.3.4.10\lib\net45\Vanara.PInvoke.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.FirewallApi, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.FirewallApi.3.4.10\lib\net45\Vanara.PInvoke.FirewallApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.Gdi32, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.Gdi32.3.4.10\lib\net45\Vanara.PInvoke.Gdi32.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.IpHlpApi, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.IpHlpApi.3.4.10\lib\net45\Vanara.PInvoke.IpHlpApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.Kernel32, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.Kernel32.3.4.10\lib\net45\Vanara.PInvoke.Kernel32.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.Mpr, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.Mpr.3.4.10\lib\net45\Vanara.PInvoke.Mpr.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.NetApi32, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.NetApi32.3.4.10\lib\net45\Vanara.PInvoke.NetApi32.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.NetListMgr, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.NetListMgr.3.4.10\lib\net45\Vanara.PInvoke.NetListMgr.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.NewDev, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.NewDev.3.4.10\lib\net45\Vanara.PInvoke.NewDev.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.NtDll, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.NtDll.3.4.10\lib\net45\Vanara.PInvoke.NtDll.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.NTDSApi, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.NTDSApi.3.4.10\lib\net45\Vanara.PInvoke.NTDSApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.Ole, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.Ole.3.4.10\lib\net45\Vanara.PInvoke.Ole.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.PowrProf, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.PowrProf.3.4.10\lib\net45\Vanara.PInvoke.PowrProf.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.Rpc, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.Rpc.3.4.10\lib\net45\Vanara.PInvoke.Rpc.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.Security, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.Security.3.4.10\lib\net45\Vanara.PInvoke.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.SetupAPI, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.SetupAPI.3.4.10\lib\net45\Vanara.PInvoke.SetupAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.Shared, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.Shared.3.4.10\lib\net45\Vanara.PInvoke.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.ShlwApi, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.ShlwApi.3.4.10\lib\net45\Vanara.PInvoke.ShlwApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.User32, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.User32.3.4.10\lib\net45\Vanara.PInvoke.User32.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.WinINet, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.WinINet.3.4.10\lib\net45\Vanara.PInvoke.WinINet.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.WlanApi, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.WlanApi.3.4.10\lib\net45\Vanara.PInvoke.WlanApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.Ws2_32, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.Ws2_32.3.4.10\lib\net45\Vanara.PInvoke.Ws2_32.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.WTSApi32, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.WTSApi32.3.4.10\lib\net45\Vanara.PInvoke.WTSApi32.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.Security, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.Security.3.4.10\lib\net45\Vanara.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.SystemServices, Version=3.4.10.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.SystemServices.3.4.10\lib\net45\Vanara.SystemServices.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="lib\Config.cs" />
+    <Compile Include="lib\TapManager.cs" />
+    <Compile Include="ui\AdapterManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\AdapterManager.Designer.cs">
+      <DependentUpon>AdapterManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\AddSuperNode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\AddSuperNode.Designer.cs">
+      <DependentUpon>AddSuperNode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\ConnectToEdge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\ConnectToEdge.Designer.cs">
+      <DependentUpon>ConnectToEdge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lib\IPv4Address.cs" />
+    <Compile Include="lib\Log.cs" />
+    <Compile Include="ui\EdgeLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\EdgeLogs.Designer.cs">
+      <DependentUpon>EdgeLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lib\EntryPoint.cs" />
+    <Compile Include="lib\Management.cs" />
+    <Compile Include="ui\Peers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\Peers.Designer.cs">
+      <DependentUpon>Peers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="lib\Utils.cs" />
+    <Compile Include="ui\Routes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\Routes.Designer.cs">
+      <DependentUpon>Routes.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ui\AdapterManager.resx">
+      <DependentUpon>AdapterManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\AddSuperNode.resx">
+      <DependentUpon>AddSuperNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\ConnectToEdge.resx">
+      <DependentUpon>ConnectToEdge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\EdgeLogs.resx">
+      <DependentUpon>EdgeLogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\Peers.resx">
+      <DependentUpon>Peers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ui\Routes.resx">
+      <DependentUpon>Routes.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include=".editorconfig" />
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="res.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <Content Include="icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>powershell Compress-Archive -Path '$(SolutionDir)\res\*' -DestinationPath $(SolutionDir)\res.zip -CompressionLevel Optimal -Force</PreBuildEvent>
+  </PropertyGroup>
+</Project>
